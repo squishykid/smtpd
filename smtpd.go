@@ -13,8 +13,8 @@ import (
 )
 
 var (
-	rcptToRE   = regexp.MustCompile(`[Tt][Oo]:<(.+)>`)
-	mailFromRE = regexp.MustCompile(`[Ff][Rr][Oo][Mm]:<(.*)>`) // Delivery Status Notifications are sent with "MAIL FROM:<>"
+	rcptToRE   = regexp.MustCompile(`[Tt][Oo]:\s?<(.+)>`)
+	mailFromRE = regexp.MustCompile(`[Ff][Rr][Oo][Mm]:\s?<(.*)>`) // Delivery Status Notifications are sent with "MAIL FROM:<>"
 )
 
 // Handler function called upon successful receipt of an email.
